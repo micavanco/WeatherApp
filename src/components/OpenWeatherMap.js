@@ -1,35 +1,22 @@
 import React, { Component } from 'react';
+import WeatherList from '../containers/weather-list';
 import axios from 'axios';
 
-const API_KEY = '';
-
+const API_KEY = 'b005ba3e47be51a4589a6e477bb77b4c';
 
 class OpenWeatherMap extends Component
 {
     constructor(props)
     {
         super(props);
-
-        this.state = {
-            city: '',
-            temp: 0
-        };
-    }
-
-    componentDidMount()
-    {
-        axios.get('http://api.openweathermap.org/data/2.5/weather?q=Wroclaw&units=metric&APPID='+API_KEY)
-            .then(res => {
-                this.setState({temp: res.data.main.temp,
-                                city: res.data.name,});
-            }).catch(error => alert(error));
     }
 
     render()
     {
-            return <div>City: {this.state.city} Temp: { this.state.temp } &deg;C</div>;
+            return (
+             <WeatherList/>
+            );
     }
-
 }
 
 export default OpenWeatherMap;

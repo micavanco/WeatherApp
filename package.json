@@ -18,6 +18,9 @@
     "babel-cli": "^6.26.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-promise": "^0.6.0",
     "webpack": "^4.17.1",
     "webpack-dev-server": "^3.1.5"
   },
